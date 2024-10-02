@@ -8,13 +8,16 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        // Sum of a sequence
-        System.out.println("Last number? ");
-        int n = scanner.nextInt();
-        int sum = 0;
-        for (int i = 1; i <= n; i++) {
-            sum += i;
+        // while
+        // int x = 10;
+        // while (x < 100) {
+        //     System.out.println(x);
+        //     x += 10;
+        // }
+
+        // for
+        for (int x = 10; x < 100; x += 10) {
+            System.out.println(x);
         }
-        System.out.println("The sum is " + sum);
     }
 }
