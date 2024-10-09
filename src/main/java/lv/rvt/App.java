@@ -6,16 +6,19 @@ public class App
 {
     public static void main( String[] args )
     {
+        // Divisible by three
         Scanner scanner = new Scanner(System.in);
-        // From one to parameter
-        printUntilNumber(5);
+        int beginning1 = Integer.valueOf(scanner.nextLine());
+        int end1 = Integer.valueOf(scanner.nextLine());
         System.out.println("");
-        printUntilNumber(2);
+        divisibleByThreeInRange(beginning1, end1);
     }
-    public static void printUntilNumber(int number){
-        int i = 1;
-        while(i <= number){
-            System.out.println(i++);
+    public static void divisibleByThreeInRange(int beginning, int end)
+    {
+        for(int i = beginning; i <= end; i++){
+            if(i % 3 == 0) {
+                System.out.println(i);
+            }
         }
     }
 }
