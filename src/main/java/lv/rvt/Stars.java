@@ -35,4 +35,43 @@ public class Stars{
         }
         
     }
+
+    public static void printSpaces(int number){
+        for (int i = 0; i < number; i++){
+            System.out.print(" ");
+        }
+    }
+
+    public static void printTriangle2(int size){
+        for (int i = 0; i <= size; i++){  
+            for(int j = 0; j < size - i; j++){
+                System.out.print(" ");
+            }
+            for (int k = 0; k < i; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void christmasTree(int height){
+        for (int i = 0; i < height; i++){  
+            for(int j = 0; j < height - i; j++){
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= 2 * i; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < 2; i++){
+            for ( int j = 0; j <= height -2; j++){
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= 2; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 }
