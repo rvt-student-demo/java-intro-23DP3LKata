@@ -9,17 +9,15 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Integer> list = new ArrayList<>();
-        int sum = 0;
+        ArrayList<String> list = new ArrayList<>();
         while(true){
-            int number = Integer.valueOf(scanner.nextLine());
-            list.add(number);
-            if(number == 0){
+            String name = (scanner.nextLine());
+            list.add(name);
+            if(name.equals("")){
                 break;
             }
         }
-        sum = (list.get(1) + list.get(2));
-        System.out.println(list);   
-        System.out.println(sum);
+        int last = list.size() - 2;
+        System.out.println(list.get(last));
     }       
 }
