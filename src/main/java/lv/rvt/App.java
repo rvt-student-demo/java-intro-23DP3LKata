@@ -8,15 +8,11 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        // Advanced astrology (3 parts)
-        Stars.printStars(5);
-        Stars.printStars(3);
-        Stars.printStars(9);
+        Stars.printSpaces(1);
+        Stars.printTriangle2(4);
         System.out.println();
-        Stars.printSquare(4);
+        Stars.christmasTree(4);
         System.out.println();
-        Stars.printRectangle(17,3);
-        System.out.println();
-        Stars.printTriangle(4);
-    }
+        Stars.christmasTree(10);
+    }       
 }
