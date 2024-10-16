@@ -1,6 +1,7 @@
 package lv.rvt;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.*;
 
 public class App 
 {
@@ -8,11 +9,17 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        Stars.printSpaces(1);
-        Stars.printTriangle2(4);
-        System.out.println();
-        Stars.christmasTree(4);
-        System.out.println();
-        Stars.christmasTree(10);
+        ArrayList<Integer> list = new ArrayList<>();
+        int sum = 0;
+        while(true){
+            int number = Integer.valueOf(scanner.nextLine());
+            list.add(number);
+            if(number == 0){
+                break;
+            }
+        }
+        sum = (list.get(1) + list.get(2));
+        System.out.println(list);   
+        System.out.println(sum);
     }       
 }
