@@ -17,8 +17,16 @@ public class App
                 break;
             }
         }
-        for (int i = 0; i < list.size() - 1; i++){
-            System.out.println(list.get(i));
-        }
+        
+        int largest = 0;
+        for(int i = 0; i < list.size(); i++){
+            int number = list.get(i);
+            if (largest < number){
+                largest = number;
+            }
+        }   
+        System.out.println();
+        System.out.println("The greatest number: " + largest);
+        
     }       
 }   
