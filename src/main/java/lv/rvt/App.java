@@ -29,7 +29,8 @@ public class App
         if (numbers.size() == 0) {
             return;
         }
-    
-        numbers.remove(1);
+        
+        int prelast = numbers.size() - 1;
+        numbers.remove(prelast);
     }
 }   
