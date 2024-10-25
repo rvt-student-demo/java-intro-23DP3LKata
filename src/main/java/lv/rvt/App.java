@@ -8,26 +8,28 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        // Index of
+        // Remove last
 
-        ArrayList<Integer> list = new ArrayList<>();
-        while(true){
-            int number = scanner.nextInt();
-            list.add(number);
-            if (number == -1){
-                break;
-            }
-        }
-        System.out.println();
-        System.out.print("Search for? ");
-        int search = Integer.valueOf(scanner.nextInt());
+        ArrayList<String> strings = new ArrayList<>();
 
-        for(int i = 0; i < list.size(); i++){
-            if(list.get(i) == search){
-                System.out.println(search + " is at index " + i);
-            } else if(list.get(i) != search){
-                continue;
-            }
+        strings.add("First");
+        strings.add("Second");
+        strings.add("Third");
+
+        System.out.println(strings);
+
+        removeLast(strings);
+        removeLast(strings);
+
+        System.out.println(strings);
+    }
+
+    public static void removeLast(ArrayList<String> numbers) 
+    {
+        if (numbers.size() == 0) {
+            return;
         }
+    
+        numbers.remove(1);
     }
 }   
