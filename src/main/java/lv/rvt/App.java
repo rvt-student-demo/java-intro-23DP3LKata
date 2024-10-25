@@ -1,6 +1,5 @@
 package lv.rvt;
 
-import java.util.ArrayList;
 import java.util.*;
 
 public class App 
@@ -8,6 +7,8 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
+
+        // Only these numbers
 
         ArrayList<Integer> list = new ArrayList<>();
         while(true){
@@ -17,16 +18,14 @@ public class App
                 break;
             }
         }
-        
-        int largest = 0;
-        for(int i = 0; i < list.size(); i++){
-            int number = list.get(i);
-            if (largest < number){
-                largest = number;
-            }
-        }   
-        System.out.println();
-        System.out.println("The greatest number: " + largest);
-        
-    }       
+
+        System.out.print("From where? ");
+        int from = Integer.valueOf(scanner.nextInt());
+        System.out.print("To where? ");
+        int to = Integer.valueOf(scanner.nextInt());
+
+        for (from = from; from <= to; from++){
+            System.out.println(list.get(from));
+        }
+    }
 }   
