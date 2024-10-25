@@ -8,7 +8,7 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        // Only these numbers
+        // Index of
 
         ArrayList<Integer> list = new ArrayList<>();
         while(true){
@@ -18,14 +18,16 @@ public class App
                 break;
             }
         }
+        System.out.println();
+        System.out.print("Search for? ");
+        int search = Integer.valueOf(scanner.nextInt());
 
-        System.out.print("From where? ");
-        int from = Integer.valueOf(scanner.nextInt());
-        System.out.print("To where? ");
-        int to = Integer.valueOf(scanner.nextInt());
-
-        for (from = from; from <= to; from++){
-            System.out.println(list.get(from));
+        for(int i = 0; i < list.size(); i++){
+            if(list.get(i) == search){
+                System.out.println(search + " is at index " + i);
+            } else if(list.get(i) != search){
+                continue;
+            }
         }
     }
 }   
