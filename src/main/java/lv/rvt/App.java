@@ -8,29 +8,20 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        // Remove last
+        // Bubble sort
 
-        ArrayList<String> strings = new ArrayList<>();
-
-        strings.add("First");
-        strings.add("Second");
-        strings.add("Third");
-
-        System.out.println(strings);
-
-        removeLast(strings);
-        removeLast(strings);
-
-        System.out.println(strings);
-    }
-
-    public static void removeLast(ArrayList<String> numbers) 
-    {
-        if (numbers.size() == 0) {
-            return;
+        int[] array = {5,4,2,7,1,3,6,9,8};
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array.length - 1; j++){
+                if(array[j] > array[j + 1]){
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
         }
-        
-        int prelast = numbers.size() - 1;
-        numbers.remove(prelast);
+        for(int i = 0; i < array.length; i++){
+            System.out.print(array[i] + " ");
+        }
     }
 }   
