@@ -8,20 +8,17 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        // Bubble sort
+        // Line by line
 
-        int[] array = {5,4,2,7,1,3,6,9,8};
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j < array.length - 1; j++){
-                if(array[j] > array[j + 1]){
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
+        while(true){
+            String text = scanner.nextLine();
+            if (text.equals("")){
+                break;
+            } 
+            String[] split = text.split(" ");
+            for (int i = 0; i < split.length; i++) {
+                System.out.println(split[i]);
             }
-        }
-        for(int i = 0; i < array.length; i++){
-            System.out.print(array[i] + " ");
         }
     }
 }   
