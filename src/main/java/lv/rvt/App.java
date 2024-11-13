@@ -5,20 +5,24 @@ public class App
     public static void main( String[] args )
     {
 
-        Debt mortgage = new Debt(120000.0, 1.01);
-        mortgage.printBalance();
+        // Payment Card (6 parts)
 
-        mortgage.waitOneYear();
-        mortgage.printBalance();
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
 
-        int years = 0;
-
-        while (years < 20) {
-            mortgage.waitOneYear();
-            years = years + 1;
-        }
-
-        mortgage.printBalance();
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
 
     }
-}   
+}       
