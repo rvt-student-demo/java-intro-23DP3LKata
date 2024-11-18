@@ -1,44 +1,23 @@
 package lv.rvt;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class App 
 {
     public static void main( String[] args )
     {
-        
-        // Books
+        // Cubes
         
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Book> books = new ArrayList<>();
-
         while (true) {
-            System.out.print("Title: ");
-            String title = scanner.nextLine();
-            if (title.isEmpty()) {
+            String input = scanner.nextLine();
+            if (input.equals("end")) {
                 break;
-            } 
-            
-            System.out.print("Pages: ");
-            int pages = Integer.valueOf(scanner.nextLine());
-            System.out.print("Publication year: ");
-            int year = Integer.valueOf(scanner.nextLine());
-            
-            books.add(new Book(title, pages, year));
+            }
+            int input2 = Integer.valueOf(input);
+            System.out.println(input2 * input2 * input2);
         }
-        System.out.println("");
-        System.out.print("What information will be printed? ");
-        String answ = scanner.nextLine();
 
-        if (answ.equals("everything")) {
-            for (Book book : books) {
-                System.out.println(book.getDetails());
-            }
-        } else if (answ.equals("name")) {
-            for (Book book : books) {
-                System.out.println(book.getTitle());
-            }
-        }
+        scanner.close();
     }
 }
