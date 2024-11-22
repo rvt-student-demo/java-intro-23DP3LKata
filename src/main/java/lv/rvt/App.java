@@ -6,18 +6,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        // Cubes
-        
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String input = scanner.nextLine();
-            if (input.equals("end")) {
-                break;
-            }
-            int input2 = Integer.valueOf(input);
-            System.out.println(input2 * input2 * input2);
-        }
+        Fitbyte assistant = new Fitbyte(30, 60);
 
-        scanner.close();
+        double percentage = 0.5;
+
+        while (percentage < 1.0) {
+            double target = assistant.targetHeartRate(percentage);
+            System.out.println("Target " + (percentage * 100) + "% of maximum: " + target);
+            percentage = percentage + 0.1;
+        }
     }
 }
