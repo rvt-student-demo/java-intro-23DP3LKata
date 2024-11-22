@@ -6,14 +6,19 @@ public class App
 {
     public static void main( String[] args )
     {
-        // Constructor Overload
+        // Overloaded Counter (2 parts)
 
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
-
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        Counter counter = new Counter(5);
+        System.out.println(counter.value());
+        counter.increase();
+        System.out.println(counter.value());
+        counter.decrease();
+        System.out.println(counter.value());
+        counter.increase(5);
+        System.out.println(counter.value());
+        counter.decrease(6);
+        System.out.println(counter.value());
+        counter.decrease(10);
+        System.out.println(counter.value());
     }
 }
