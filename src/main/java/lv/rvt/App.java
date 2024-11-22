@@ -6,14 +6,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        Fitbyte assistant = new Fitbyte(30, 60);
+        // Constructor Overload
 
-        double percentage = 0.5;
+        Product tapeMeasure = new Product("Tape measure");
+        Product plaster = new Product("Plaster", "home improvement section");
+        Product tyre = new Product("Tyre", 5);
 
-        while (percentage < 1.0) {
-            double target = assistant.targetHeartRate(percentage);
-            System.out.println("Target " + (percentage * 100) + "% of maximum: " + target);
-            percentage = percentage + 0.1;
-        }
+        System.out.println(tapeMeasure);
+        System.out.println(plaster);
+        System.out.println(tyre);
     }
 }
