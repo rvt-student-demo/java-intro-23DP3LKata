@@ -12,11 +12,21 @@ public class Box {
         this.length = length;
     }
 
-    public double area() {
-        return width * height;
+    double area() {
+        return 2 * faceArea() + 2 * topArea() + 2 *sideArea() ;
     }
 
-    public double volume() {
+    double volume() {
         return width * height * length;
+    }
+
+    double topArea() {
+        return width * length;
+    }
+    double faceArea() {
+        return width * height;
+    }
+    double sideArea() {
+        return length * height;
     }
 }
